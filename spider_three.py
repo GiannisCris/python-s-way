@@ -6,7 +6,7 @@ import bs4
 def gethtmltext(url):
     try:
         kv = {'user-agent': 'mozilla/5.0'}
-        r = requests.get(url, headers=kv, timeout=30)
+        r = requests.get(url, headers=kv, timeout=15)
         r.raise_for_status()
         r.encoding = r.apparent_encoding
         return r.text
